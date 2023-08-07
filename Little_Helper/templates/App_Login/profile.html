@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %}
+
+{% block title_block %}
+ {{ title }}
+{% endblock %}
+
+{% block body_content %}
+ <div class="row">
+    <div class="col-sm-4">
+        {% if user.user_profile.profile_picture %}
+        <a class="nav-item nav-link" href="{% url 'App_Login:edit_picture' %}"><img src="/media/{{ user.user_profile.profile_picture }}" alt="Image" width="220px" height="220px" class="rounded-circle"> </a>
+        {% else %}
+        <a class="nav-item nav-link" href="{% url 'App_Login:edit_picture' %}"><img src="/media/Profile_Pictures/default.png" alt="Default Image" width="220px" height="220px" class="rounded-circle"> </a>
+        {% endif %}
+    </div>
+
+    <div class="col-sm-8">
+        <br>
+        <br>
+        <br>
+        <h3>{{ user.username }}<a href="{% url 'App_Login:edit_profile' %}" class="btn btn-light btn-sm">Edit Profile</a></h3>
+    </div>
+
+</div>
+
+{% endblock %}
