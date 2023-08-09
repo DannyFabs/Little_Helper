@@ -1,0 +1,16 @@
+{% extends 'navbar.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %}
+ {{ title }}
+{% endblock %}
+
+{% block body_content %}
+
+<form method="POST">
+    {{ form|crispy }}
+    {% csrf_token %}
+    <a href="{% url 'App_Login:change_password' %}">Edit Password</a>
+    <br>
+    <button type="submit" class="btn btn-success btn-sm">Update</button>
+</form>
+{% endblock %}
