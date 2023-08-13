@@ -9,6 +9,6 @@
 <h2>{{ task.task_name }}</h2>
 <p> {{ task.task_description }}</p>
 <p><b>{{ task.task_date}} &nbsp; {{ task.task_time }}</b> </p>
-<a href="#" class="btn btn-primary btn-sm">Edit Task</a>
-<a href="#" class="btn btn-danger btn-sm">Delete Task</a>
+<a href="{% url 'App_Task:edit_task' slug=task.task_slug %}" class="btn btn-primary btn-sm">Edit Task</a>
+<a href="{% url 'App_Task:delete' slug=task.task_slug %}" class="btn btn-danger btn-sm">Delete Task</a>
 {% endblock %}
