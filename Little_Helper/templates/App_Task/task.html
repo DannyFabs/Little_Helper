@@ -1,0 +1,14 @@
+{% extends 'navbar.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %}
+    {{ title }}
+{% endblock %}
+
+
+{% block body_content %}
+<h2>{{ task.task_name }}</h2>
+<p> {{ task.task_description }}</p>
+<p><b>{{ task.task_date}} &nbsp; {{ task.task_time }}</b> </p>
+<a href="#" class="btn btn-primary btn-sm">Edit Task</a>
+<a href="#" class="btn btn-danger btn-sm">Delete Task</a>
+{% endblock %}

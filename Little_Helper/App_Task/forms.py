@@ -14,4 +14,4 @@ class CreateTask(forms.ModelForm):
 
     class Meta:
         model = Task
-        exclude = ('author',)
+        exclude = ('author', 'task_slug')

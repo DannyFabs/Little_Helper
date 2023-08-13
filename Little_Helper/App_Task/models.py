@@ -10,6 +10,8 @@ class Task(models.Model):
     task_date = models.DateField(blank=False)
     task_time = models.TimeField(blank=False)
     task_description = models.TextField(max_length=1000, blank=True)
+    # slug for identification of a task when task needs to be modified(using this instead of a primary key
+    task_slug = models.SlugField(null=True, unique=True)
 
     def __str__(self):
         return self.task_name
