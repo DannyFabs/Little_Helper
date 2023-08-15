@@ -49,7 +49,7 @@ def sign_in(request):
 @login_required
 def sign_out(request):
     logout(request)
-    return HttpResponseRedirect(reverse('App_Login:sign_in'))
+    return HttpResponseRedirect(reverse('landing_page'))
 
 
 @login_required

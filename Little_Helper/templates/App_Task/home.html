@@ -6,6 +6,10 @@
 
 {% block body_content %}
 
+<a href="{% url 'App_Task:create_task' %}" class="btn btn-primary btn-sm">Create New Task</a>
 <h1>Already in the home page</h1>
-
+{% for task in user.all_tasks.all  %}
+ <a href="{% url 'App_Task:current_task' slug=task.task_slug %}"><h3>{{ task.task_name }}</h3></a>
+ <p>{{ task.task_date }}</p>
+{% endfor %}
 {% endblock %}
