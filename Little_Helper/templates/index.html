@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title_block %}
+    Little Helper - Task Manager
+{% endblock %}
+
+{% block css_block %}
+<style>
+    /* Styles for the landing page */
+    .body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 123, 255, 0.9), rgba(0, 123, 255, 0.6)), url('https://via.placeholder.com/PTM');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: #fff;
+    }
+    .logo {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+    }
+    .description {
+        font-size: 24px;
+        margin-bottom: 40px;
+        opacity: 0.8;
+    }
+    .cta-container {
+        display: flex;
+        gap: 20px;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+{% endblock %}
+
+{% block body_content %}
+    <div class="container">
+        <div class="logo">Little Helper</div>
+        <div class="description">Your Personal Task Manager</div>
+        <div class="cta-container">
+            <a href="{% url 'App_Login:sign_in' %}" class="cta-button">Sign In</a>
+            <a href="{% url 'App_Login:sign_up' %}" class="cta-button">Sign Up</a>
+        </div>
+    </div>
+{% endblock %}
