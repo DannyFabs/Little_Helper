@@ -22,13 +22,13 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-c$x96-sn#8!qbn9^3=31zc5qz_6q!y_rny8i_r5m_f2cx(z@0^'
-SECRET_KEY = 'YVJDD]VK>G0X~xT@=+0B^t>=Yj^mWnH:]V#3ATNZu)5?*Fj@99s'
+SECRET_KEY = 'django-insecure-c$x96-sn#8!qbn9^3=31zc5qz_6q!y_rny8i_r5m_f2cx(z@0^'
+# SECRET_KEY = 'YVJDD]VK>G0X~xT@=+0B^t>=Yj^mWnH:]V#3ATNZu)5?*Fj@99s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
