@@ -45,7 +45,14 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'App_Login',
     'App_Task',
+    'django_crontab'
 ]
+
+# check at midnight daily for deletion in a production environment
+CRONJOBS = [
+    ('0 0 * * *', 'myapp.management.commands.delete_passed_tasks', '>> /path/to/log/file.log')
+]
+
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
